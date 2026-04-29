@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Typing trainer</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/common/for-flexbox.css">
+    <link rel="stylesheet" href="/static/desktop/variables.css">
+    <link rel="stylesheet" href="/static/desktop/tabs.css">
+    <link rel="stylesheet" href="/static/desktop/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/static//common/favicon.ico" type="image/x-icon">
+
+    <script src="/static/common/translations.js"></script>
+    <script src="/static/desktop/layouts.js"></script>
+    <script src="/static/desktop/schemes.js" defer></script>
+    <script src="/static/desktop/index.js" defer></script>
+</head>
+
+<!--
+id => class => elem attributes => other
+
+flexbox properties are set useing classnames from "for-flexbox.css"
+-->
+
+<body class="flex dir-col jc-sev ai-center">
+    <div id="fs-container" class="flex jc-spb ai-center">
+        <input id="fs-custom-input" type="number" placeholder="Text font size (25px)" max="50" min="12">
+        <button id="font-size-custom">Ok</button>
+    </div>
+
+    <button id="lang-button"><h2>ru</h2></button>
+
+
+    <main class="flex dir-col jc-spb ai-center">
+        <header class="flex dir-col ai-center">
+            <nav id="header-nav" class="flex flex-spb">
+                <button id="words-tab" class="nav-button"></button>
+                <button id="numbers-tab" class="nav-button"></button>
+                <button id="sentences-tab" class="nav-button"></button>
+            </nav>
+
+            <div id="tab-content" class="flex jc-center ai-center"></div>
+        </header>
+
+        <section id="text-wrapper" class="flex jc-center ai-center" >
+            <div id="text" class="flex flex-wrap-w align-content-fs"></div>
+
+            <div id="start-overlay" class="flex jc-center ai-center">
+                <h1 id="start-overlay-text"></h1>
+            </div>
+        </section>
+    </main>
+
+    <div id="end-overlay" class="flex jc-center ai-center">
+        <div id="end-stats" class="flex ai-center jc-center">
+            <ul id="stats-field"></ul>
+        </div>
+
+        <div id="close-cross" class="flex jc-center ai-center"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,344 @@
+/* Template for all styles:
+content (for pseudo)
+
+size, aspect ratio
+
+display (for values that not in "for-flexbox.css" and some
+other exeptions), position
+
+margin, padding, overflow, user select
+
+transform
+
+color, bg color, opcaity
+
+font size, font weight
+
+animation, transition
+
+border
+*/
+
+/*
+priority selection by ID if the style is used once
+else by classname
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    overflow-y: hidden;
+    font-family: "Space Mono", monospace;
+    background-color: var(--body-color);
+}
+
+body,
+button,
+input {
+    font-family: "Space Mono", monospace;
+}
+
+#body-subcontainer {
+    width: 95%;
+    height: 50%;
+    margin-top: 10%;
+}
+
+main {
+    width: 100%;
+    height: 83%;
+}
+
+#tab-overlay {
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    backdrop-filter: blur(2px);
+}
+
+header {
+    width: 100%;
+    height: 13%;
+}
+
+#header-nav {
+    width: 100%;
+    height: 100%;
+
+    /* margin-bottom: 7px; */
+
+    transition: .5s;
+}
+
+#header-nav > button {
+    width: 30%;
+    height: 100%;
+
+    font-size: calc(16px + var(--delta-font));
+
+    /* font-size: 16px; */
+}
+
+#top-container {
+    width: 100%;
+    height: 10%;
+}
+
+#fs-container {
+    height: 100%;
+    width: 85%;
+}
+
+#fs-container > input {
+    height: 100%;
+    flex: .99;
+}
+
+#fs-container > button {
+    height: 100%;
+    aspect-ratio: 1;
+    
+    font-size: calc(18px + var(--delta-font));
+    text-transform: uppercase;
+}
+
+#fs-custom-input {
+    font-size: 20px;
+}
+
+#tab-content {
+    height: 70%;
+    width: 100%;
+
+    background-color: var(--bg-color-1);
+
+    border: 0.18vw solid gray;
+    border-radius: 5px;
+}
+
+#text-wrapper {
+    width: 100%;
+    height: 82%;
+
+    transform: scale(1);
+
+    background-color: var(--bg-color-1);
+
+    /* transition: transform .4s ease-out; */
+    transition: height .4s, transform .4s;
+    border: 0.18vw solid gray;
+    border-radius: 5px;
+}
+
+#text {
+    width: 99%;
+    height: 99%;
+
+    user-select: none;
+    overflow-y: hidden;
+
+    color: var(--main-text-color);
+
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 1.1;
+    letter-spacing: 0.08em;
+
+    border: 0.07vw solid transparent;
+    border-radius: 5px;
+}
+
+
+letter {
+    /*
+    I can't use classnames from file "for-flexbox.css",
+    because this element is dynamic and doesn't exist in
+    the default markup.
+    */
+
+    display: flex;
+    align-items: center;
+}
+
+.letter-cursor-bf::before {
+    content: "";
+
+    width: 3px;
+    height: 1.5rem;
+
+    background-color: var(--letter-cursor-color);
+    opacity: 1;
+}
+
+.letter-cursor-af::after {
+    content: "";
+
+    width: 3px;
+    height: 1.5rem;
+
+    background-color: var(--letter-cursor-color);
+    opacity: 1;
+}
+
+#start-overlay {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--start-overlay-bg);
+    backdrop-filter: blur(1px);
+}
+
+#start-overlay > h1 {
+    color: var(--start-overlay-color);
+
+    font-style: normal;
+    font-size: calc(40px + var(--delta-font));
+    font-weight: 600;
+}
+
+.checkbox-label {
+    margin-right: 7px;
+
+    font-size: 18px;
+}
+
+.input-checkbox {
+    width: 20px;
+    height: 20px;
+
+    margin-right: 3px;
+}
+
+#end-overlay {
+    width: 100vw;
+    height: 100vh;
+
+    display: none;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    backdrop-filter: blur(3px);
+}
+
+#end-stats {
+    width: 95%;
+    height: 65%;
+
+    background-color: var(--bg-color-1);
+
+    animation-iteration-count: 1;
+
+    border: 0.21vw solid gray;
+    border-radius: 5px;
+}
+
+#end-stats > h2 {
+    margin-right: 15px;
+}
+
+#end-stats > * {
+    color: var(--end-stats-text-color);
+
+    font-size: calc(34px + var(--delta-font));
+}
+
+.close-cross {
+    width: 5vw;
+    height: 5vw;
+
+    position: absolute;
+    top: 3vw;
+    right: 3vw;
+}
+
+.close-cross:before,
+.close-cross:after {
+    content: '';
+
+    width: 0.3vw;
+    height: 5vw;
+
+    position: absolute;
+
+    background: var(--close-cross-bg);
+
+    border: 0.07vw solid transparent;
+    border-radius: 4px;
+}
+
+.close-cross:before {
+    transform: rotate(45deg);
+}
+
+.close-cross:after {
+    transform: rotate(-45deg);
+}
+
+.wrong {
+    color: var(--wrong-color);
+}
+
+.right {
+    color: var(--right-color);
+}
+
+#lang-button {
+    height: 100%;
+    aspect-ratio: 1;
+
+    background-color: var(--bg-color-1);
+
+    text-transform: uppercase;
+
+    border: 0.11vw solid gray;
+    border-radius: 5px;
+}
+
+#lang-button > h2 {
+    font-size: calc(20px + var(--delta-font));
+    font-weight: 600;
+}
+
+@keyframes end {
+    0% {
+        transform: translateY(300%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
+@keyframes rend {
+    /* means reverse end */
+
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-300%);
+    }
+}

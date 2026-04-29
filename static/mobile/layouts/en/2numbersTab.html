@@ -1,0 +1,43 @@
+<div id="numbers-tab__container-0" class="flex dir-col ai-center jc-spb">
+    <div id="numbers-tab__container-1" class="flex dir-col ai-center jc-spb">
+        <div class="numbers-tab__container-2 flex dir-col jc-spb ai-center">
+            <h2 class="param-description">Count</h2>
+
+            <div class="numbers-tab__container-3 flex jc-spb">
+                <div class="numbers-tab__input-container flex jc-spb">
+                    <input class="input-radio" type="radio" name="numbers-quantity" id="nq-10" value="10">
+                    <label for="nq-10" class="flex jc-center ai-center radio-label">10</label>
+                    
+                    <input class="input-radio" type="radio" name="numbers-quantity" id="nq-25" value="25">
+                    <label for="nq-25" class="flex jc-center ai-center radio-label">25</label>
+                    
+                    <input class="input-radio" type="radio" name="numbers-quantity" id="nq-50" value="50">
+                    <label for="nq-50" class="flex jc-center ai-center radio-label">50</label>
+                </div>
+
+                <input class="custom-input" type="number" placeholder="Custom" id="numbers-q-custom">
+            </div>
+        </div>
+
+        <div class="numbers-tab__container-2 flex dir-col jc-spb ai-center">
+            <h2 class="param-description">Max length</h2>
+
+            <div class="numbers-tab__container-3 flex jc-spb">
+                <div class="numbers-tab__input-container ntc3-1 flex jc-spb">
+                    <input class="input-radio" type="radio" name="numbers-ml" id="nml-3" value="3">
+                    <label for="nml-3" class="flex jc-center ai-center radio-label">3</label>
+                    
+                    <input class="input-radio" type="radio" name="numbers-ml" id="nml-5" value="5">
+                    <label for="nml-5" class="flex jc-center ai-center radio-label">5</label>
+                    
+                    <input class="input-radio" type="radio" name="numbers-ml" id="nml-7" value="7">
+                    <label for="nml-7" class="flex jc-center ai-center radio-label">7</label>
+                </div>
+                
+                <input class="custom-input" type="number" placeholder="Custom" id="numbers-ml-custom">
+            </div>
+        </div>
+    </div>
+
+    <button id="numbers-tab__go" onclick="fetchNumbers(); this.blur(); closeTabOverlay();">Go</button>
+</div>

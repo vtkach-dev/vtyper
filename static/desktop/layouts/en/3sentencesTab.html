@@ -1,0 +1,39 @@
+<div id="sentences-tab__container-0" class="flex jc-spb">
+    <div id="sentences-tab__container-1" class="flex dir-col jc-spb">
+        <div class="sentences-tab__container-2 flex jc-spb ai-center">
+            <h2 class="param-description">Count:</h2>
+
+            <div id="sentences-tab__container-3" class="flex jc-spb ai-center">
+                <div id="sentences-tab__radio-container" class="flex jc-spb ai-center">
+                    <div class="flex jc-spb sentences-tab__radio-subcontainer">
+                        <input id="sq-1" class="input-radio" type="radio" name="sentences-quantity" value="5">
+                        <label for="sq-1" class="flex ai-center jc-center radio-label">5</label>
+                    </div>
+
+                    <div class="flex jc-spb sentences-tab__radio-subcontainer">
+                        <input id="sq-2" class="input-radio" type="radio" name="sentences-quantity" value="10">
+                        <label for="sq-2" class="flex ai-center jc-center radio-label">10</label>
+                    </div>
+
+                    <div class="flex jc-spb sentences-tab__radio-subcontainer">
+                        <input id="sq-3" class="input-radio" type="radio" name="sentences-quantity" value="15">
+                        <label for="sq-3" class="flex ai-center jc-center radio-label">15</label>
+                    </div>
+                </div>
+
+                <input id="sentences-q-custom" class="custom-input" type="number" placeholder="Custom">
+            </div>
+        </div>
+
+        <div class="sentences-tab__container-2 flex jc-sev ai-center">
+            <input id="pmarks" class="input-checkbox" type="checkbox" name="punctuation-marks" value="">
+            <label for="pmarks" class="checkbox-label">Punctuation marks</label>
+            
+            <input id="include-numbers" class="input-checkbox" type="checkbox" name="include-numbers" value="">
+            <label for="include-numbers" class="checkbox-label">Include numbers</label>
+        </div>
+    </div>
+
+    <button id="sentences-tab__go" onclick="fetchSentences(); this.blur();">Go</button>
+</div>
+

@@ -1,0 +1,242 @@
+/*
+A strange-looking entry, where the style comes with
+the prefix "!important" is used for adaptive
+Russian-language tab layout.
+*/
+
+.param-description {
+    font-size: calc(24px + var(--delta-font));
+}
+
+.input-radio {
+    width: 4vw;
+    /* width: 21px; */
+}
+
+.radio-label {
+    font-size: calc(20px + var(--delta-font))
+}
+
+.custom-input {
+    font-size: calc(16px + var(--delta-font));
+}
+
+/* ALL FOR WORDS TAB 
+------------------------------------------------------------------
+*/
+
+#words-tab__container-0 {
+    width: 90%;
+    height: 22%;
+
+    margin-top: 5%;
+
+    /* border: 1px solid red; */
+}
+
+.w-t__c-0_ru {
+    width: 85% !important;
+}
+
+#words-tab__container-1 {
+    width: 75%;
+    height: 51%;
+
+    /* border: 1px solid red;  */
+}
+
+.w-t__c-1_ru {
+    width: 55% !important;
+}
+
+.w-t__i-c_ru {
+    width: 50% !important;
+}
+
+#words-tab__input-container {
+    width: 60%;
+    height: 100%;
+
+    /* border: 1px solid black; */
+}
+
+.words-tab__input-subcontainer {
+    width: 30%;
+    /* border: 1px solid green; */
+}
+
+#words-tab__wq-custom {
+    width: 70%;
+    height: 40%;
+    /*border: 2px solid blue;*/
+}
+
+#words-tab__wq-custom > input {
+    width: 80%;
+}
+
+#words-tab__wq-custom > button {
+    aspect-ratio: 1;
+    font-size: calc(14px + var(--delta-font));
+}
+
+/*
+END OF WORDS TAB
+---------------------------------------------------------------------
+*/
+
+
+/* ALL FOR NUMBERS TAB 
+------------------------------------------------------------------
+*/
+
+#numbers-tab__container-0 {
+    width: 90%;
+    height: 43%;
+
+    margin-top: 5%;
+
+    /* border: 1px solid red; */
+}
+
+
+#numbers-tab__container-1 {
+    width: 100%;
+    height: 70%;
+
+    /* border: 1px solid blue; */
+}
+
+.numbers-tab__container-2 {
+    width: 100%;
+    height: 45%;
+}
+
+/* .numbers-tab__container-2 > h2 {
+    font-size: calc(20px + var(--delta-font));
+} */
+
+.numbers-tab__container-3 {
+    width: 90%; 
+    height: 70%;
+
+    /* border: 1px solid green; */
+}
+
+.numbers-tab__input-container {
+    width: 45%; 
+    height: 100%;
+
+    /* border: 1px solid green; */
+}
+
+
+#numbers-q-custom, #numbers-ml-custom {
+    height: 100%;
+    width: 47%;
+}
+
+#numbers-tab__go {
+    width: 100%;
+    height: 22%;
+
+    text-align: center;
+    font-size: calc(24px + var(--delta-font));
+}
+
+/*
+END OF NUMBERS TAB
+---------------------------------------------------------------------
+*/
+
+
+/* ALL FOR SENTENCES TAB 
+------------------------------------------------------------------
+*/
+
+#sentences-tab__container-0 {
+    width: 80%;
+    height: 38%;
+
+    margin-top: 5%;
+    
+    /* border: 1px solid black; */
+}
+
+#sentences-tab__container-1 {
+    width: 100%;
+    height: 68%;
+}
+
+.sentences-tab__checkbox-container {
+    width: 100%;
+    height: 48%;
+
+    /* border: 1px solid yellow; */
+    /* border: 1px solid red; */
+}
+
+#sentences-tab__radio-container {
+    width: 90%;
+    height: 50%;
+
+    /* border: 1px solid green; */
+}
+
+#sentences-tab__radio-subcontainer {
+    width: 40%;
+    /* border: 1px solid blue; */
+}
+
+#sentences-q-custom {
+    width: 52%;
+    height: 100%;
+}
+
+#sentences-tab__go {
+    width: 100%;
+    height: 22%;
+    
+    font-size: calc(22px + var(--delta-font));
+}
+
+/*
+SOME MEDIA FOR ALL KIND OF TABS
+-----------------------------------------------------------------
+*/
+/*
+@media screen and (max-width: 1280px) {
+    #words-tab__container-0 {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1510px) {
+    #words-tab__container-0 {
+        width: 85%;
+    }
+    
+    #sentences-tab__container-0 {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .input-radio {
+        width: 0.9vw;
+    }
+}
+
+@media screen and (max-aspect-ratio: 16/10) {
+    #numbers-tab__container-0 {
+        height: 50%;
+    }
+    
+    #sentences-tab__container-0 {
+        height: 75%;
+    }
+}
+*/
+/*
+-------------------------------------------------------------------
+*/

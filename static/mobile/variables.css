@@ -1,0 +1,23 @@
+:root {
+    /* color palette */
+    --body-color: #FFBE98;
+    --bg-color-1: #F7DED0;
+    --letter-cursor-color: #f27950;
+    --end-stats-text-color: #4d4848;
+    --main-text-color: #424242;
+    --wrong-color: #fc0303;
+    --right-color: #63de4e;
+    --close-cross-bg: #f0f0f0;
+    --start-overlay-color: #5e5c5c;
+    --start-overlay-bg: #f7ded099;
+
+    --delta-font: .5vw;
+
+    /* пусть дф пока будет фиксированным для всех разрешений */
+}
+
+/* @media screen and (max-width: 1600px) {
+    :root {
+        --delta-font: -0.2vw;
+    }
+} */
