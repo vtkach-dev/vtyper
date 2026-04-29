@@ -2689,7 +2689,6 @@ doctrine
 document
 documentary
 documentation
-documentcreatetextnode
 documented
 documents
 dod
@@ -9323,7 +9322,6 @@ unavailable
 uncertainty
 uncle
 und
-undefined
 under
 undergraduate
 underground

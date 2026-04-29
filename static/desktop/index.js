@@ -392,7 +392,6 @@ function generalKeyHandler(key) {
             letterClassNames.setClassName(1, nextLetter)
 
             if (typer.chunkCounter == Math.round(typer.chunks[typer.chunkId]['length'] / 2) && typer.chunkId !== typer.chunks.length - 1) {
-                console.log('new chunk')
 
                 renderTextChunk(typer.chunkId + 1)
             }
@@ -404,8 +403,6 @@ function generalKeyHandler(key) {
                 typer.chunkId += 1
                 typer.chunkCounter = 0
 
-                console.log('clear counter ++')
-                console.log(typer.chunkClearCounter, typer.chunkId, typer.chunkCounter)
             }
 
 

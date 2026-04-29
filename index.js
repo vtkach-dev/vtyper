@@ -58,7 +58,7 @@ const toMatch = [
 
 const innerIp = '192.168.0.108';
 const outerIp = '94.181.46.30';
-const domain = 'vtyper.ru';
+const domain = '127.0.0.1';
 const protocol = 'http'
 const port = 80
 
@@ -143,6 +143,14 @@ app.get('/api/sentences', (req, res) => {
 
     rawData = rawData.map(e => e + ' ')
 
+    if (rawData.includes('undefined ')) {
+        rawData = rawData.filter(e => e != 'undefined ')
+        rawData.push(rawData[0])
+    }
+
+    //console.log(rawData);
+    
+
     rawData = rawData.toString()
     .replace(/\.\s,/g, '. ')
     .replace(/ ,/g, '')
@@ -154,8 +162,13 @@ app.get('/api/sentences', (req, res) => {
         .replace(/\s-\s/gi, ' ')
         .replace(/\."/gi, ' ')
         .replace(/\?/gi, ' ')
+        .replace(/[а-яА-ЯёЁa-zA-Z]-[а-яА-ЯёЁa-zA-Z]/gi, ' ')
         .replace(/[!"';:?/,-.]/g, '')
-    }   
+        .replace(/\s\s/gi, ' ')
+        .replace(/(?<=[a-zа-яё])(?=[A-ZА-ЯЁ])/g, ' ')
+    }
+
+    rawData = rawData.replace(/\?([a-zа-яё])/gi, '? $1')
 
     if (rawData.endsWith(' ')) {
         res.end(rawData.slice(0, rawData.length - 1))
